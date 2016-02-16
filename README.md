@@ -1,9 +1,9 @@
 # SMTableView
-A simple table view implementation, aimed at explaining how table view works
+A simple table view implementation, aimed at explaining how table view works <br/>
 本文讲述了一个 table view 的简单实现， 意在解释 table view 是如何工作的
 
 ## SMTableView原理概述
-SMTableView 继承自 UIScrollView， 直接利用了ScrollView 滑动的特性， 使得代码省去了滑动处理这一块的逻辑。想了解更多ScrollView的原理，请参考 http://oleb.net/blog/2014/04/understanding-uiscrollview/
+SMTableView 继承自 UIScrollView， 直接利用了ScrollView 滑动的特性， 使得代码省去了滑动处理这一块的逻辑。想了解更多ScrollView的原理，请参考 http://oleb.net/blog/2014/04/understanding-uiscrollview/ <br/>
 SMTableView逻辑大概可以分为这几块：计算cell位置、 对cell进行布局、cell的重用、ScrollView滑动的处理
 
 - 计算cell位置
