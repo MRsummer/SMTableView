@@ -15,9 +15,6 @@
 		3A4DAF9E1C71BF7200A0DDBA /* SMTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4DAF9D1C71BF7200A0DDBA /* SMTableViewTests.m */; };
 		3A4DAFA91C71BF7200A0DDBA /* SMTableViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4DAFA81C71BF7200A0DDBA /* SMTableViewUITests.m */; };
 		3A4DAFB81C71BFA000A0DDBA /* SMTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4DAFB71C71BFA000A0DDBA /* SMTableView.m */; };
-		3A4DAFBB1C71C43100A0DDBA /* SMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4DAFBA1C71C43100A0DDBA /* SMScrollView.m */; };
-		3A4DAFBE1C71C75900A0DDBA /* SMLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4DAFBD1C71C75900A0DDBA /* SMLabel.m */; };
-		3A4DAFC11C71CD4500A0DDBA /* OwnScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4DAFC01C71CD4500A0DDBA /* OwnScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,12 +52,6 @@
 		3A4DAFAA1C71BF7200A0DDBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A4DAFB61C71BFA000A0DDBA /* SMTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTableView.h; sourceTree = "<group>"; };
 		3A4DAFB71C71BFA000A0DDBA /* SMTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTableView.m; sourceTree = "<group>"; };
-		3A4DAFB91C71C43100A0DDBA /* SMScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMScrollView.h; sourceTree = "<group>"; };
-		3A4DAFBA1C71C43100A0DDBA /* SMScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMScrollView.m; sourceTree = "<group>"; };
-		3A4DAFBC1C71C75900A0DDBA /* SMLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLabel.h; sourceTree = "<group>"; };
-		3A4DAFBD1C71C75900A0DDBA /* SMLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLabel.m; sourceTree = "<group>"; };
-		3A4DAFBF1C71CD4500A0DDBA /* OwnScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OwnScrollView.h; sourceTree = "<group>"; };
-		3A4DAFC01C71CD4500A0DDBA /* OwnScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OwnScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,12 +108,6 @@
 				3A4DAF8A1C71BF7200A0DDBA /* ViewController.m */,
 				3A4DAFB61C71BFA000A0DDBA /* SMTableView.h */,
 				3A4DAFB71C71BFA000A0DDBA /* SMTableView.m */,
-				3A4DAFBF1C71CD4500A0DDBA /* OwnScrollView.h */,
-				3A4DAFC01C71CD4500A0DDBA /* OwnScrollView.m */,
-				3A4DAFB91C71C43100A0DDBA /* SMScrollView.h */,
-				3A4DAFBA1C71C43100A0DDBA /* SMScrollView.m */,
-				3A4DAFBC1C71C75900A0DDBA /* SMLabel.h */,
-				3A4DAFBD1C71C75900A0DDBA /* SMLabel.m */,
 				3A4DAF8F1C71BF7200A0DDBA /* Assets.xcassets */,
 				3A4DAF911C71BF7200A0DDBA /* LaunchScreen.storyboard */,
 				3A4DAF941C71BF7200A0DDBA /* Info.plist */,
@@ -286,9 +271,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A4DAFBE1C71C75900A0DDBA /* SMLabel.m in Sources */,
-				3A4DAFBB1C71C43100A0DDBA /* SMScrollView.m in Sources */,
-				3A4DAFC11C71CD4500A0DDBA /* OwnScrollView.m in Sources */,
 				3A4DAF8B1C71BF7200A0DDBA /* ViewController.m in Sources */,
 				3A4DAF881C71BF7200A0DDBA /* AppDelegate.m in Sources */,
 				3A4DAF851C71BF7200A0DDBA /* main.m in Sources */,
@@ -510,6 +492,7 @@
 				3A4DAFAF1C71BF7200A0DDBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A4DAFB01C71BF7200A0DDBA /* Build configuration list for PBXNativeTarget "SMTableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +501,7 @@
 				3A4DAFB21C71BF7200A0DDBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A4DAFB31C71BF7200A0DDBA /* Build configuration list for PBXNativeTarget "SMTableViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +510,7 @@
 				3A4DAFB51C71BF7200A0DDBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

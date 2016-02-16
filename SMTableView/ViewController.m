@@ -7,9 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "SMLabel.h"
-#import "OwnScrollView.h"
-#import "SMScrollView.h"
 #import "SMTableView.h"
 
 @interface ViewController () <SMTableViewDelegate>
@@ -21,11 +18,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     [self testTableView];
 }
-
-//========================
 
 - (void)testTableView
 {
@@ -90,32 +85,6 @@
     CGFloat saturation = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from white
     CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from black
     return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
-}
-
-//========================
-
-- (void)testScrollView
-{
-    SMScrollView *scrollView = [[SMScrollView alloc] initWithFrame:self.view.bounds];
-    scrollView.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:scrollView];
-    
-    [self addLabel:CGRectMake(0, 0, 500, 500) color:[UIColor grayColor] toScrollView:scrollView];
-    [self addLabel:CGRectMake(500, 0, 500, 500) color:[UIColor yellowColor] toScrollView:scrollView];
-    [self addLabel:CGRectMake(0, 500, 500, 500) color:[UIColor redColor] toScrollView:scrollView];
-    [self addLabel:CGRectMake(500, 500, 500, 500) color:[UIColor purpleColor] toScrollView:scrollView];
-    
-    [scrollView setContentSize:CGSizeMake(1000, 1000)];
-}
-
-- (void)addLabel:(CGRect)frame color:(UIColor *)bgColor toScrollView:(SMScrollView *)scrollView
-{
-    SMLabel *label = [[SMLabel alloc] initWithFrame:frame];
-    label.text = @"O";
-    label.font = [UIFont systemFontOfSize:60];
-    label.backgroundColor = bgColor;
-    label.textAlignment = NSTextAlignmentCenter;
-    [scrollView addSubview:label];
 }
 
 @end
