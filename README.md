@@ -2,11 +2,11 @@
 A simple table view implementation, aimed at explaining how table view works <br/>
 本文讲述了一个 table view 的简单实现， 意在解释 table view 是如何工作的
 
-## SMTableView原理概述
+## 原理概述
 SMTableView 继承自 UIScrollView， 直接利用了ScrollView 滑动的特性， 使得代码省去了滑动处理这一块的逻辑。想了解更多ScrollView的原理，请参考 http://oleb.net/blog/2014/04/understanding-uiscrollview/ <br/>
 SMTableView逻辑大概可以分为这几块：计算cell位置、 对cell进行布局、cell的重用、ScrollView滑动的处理
 
-- 计算cell位置
+- 计算cell位置 <br/>
 根据delegate获取到cell的数量和每个的高度，加起来得到总高度，然后设置ScrollView的contentSize， 就确定了scrollView的滚动区域
 ```Objective-C
 _numberOfCells = [_tableViewDelegate numberOfRowsInTableView:self];
@@ -25,7 +25,7 @@ CGSize size = CGSizeMake(CGRectGetWidth(self.frame), height);
 [self setContentSize:size];
 ```
 
-- 对cell进行布局
+- 对cell进行布局  <br/>
 首先获取到显示区域，然后获取到显示区域的cell，并设置相应的frame
 ```Objective-C
 _displayRange = [self displayRange];
@@ -37,7 +37,7 @@ for (int i = (int)_displayRange.location ; i < _displayRange.length + _displayRa
 }
 ```
 
-- cell的重用
+- cell的重用  <br/>
 对cell布局完成后，这个时候是回收不可见cell的较好时机，获取不可见cell，并将其从visibleCells中移除，加入到cellCache中
 ```Objective-C
 NSDictionary* dic = [_visibleCellsMap copy];
@@ -52,7 +52,7 @@ for (NSNumber* rowIndex  in keys) {
     }
 }
 ```
-- ScrollView滑动的处理
+- ScrollView滑动的处理  <br/>
 当ScrollView滑动的时候，检测displayRange是否发生变化，如果发生变化重新进行布局和回收cell等工作
 ```
 NSRange range = [self displayRange];
@@ -61,7 +61,7 @@ if (! NSEqualRanges(_displayRange, range)) {
 }
 ```
 
-## SMTableView的使用
+## 如何使用
 SMTableView定义如下
 ```Objective-C
 @interface SMTableView : UIScrollView
@@ -84,7 +84,7 @@ SMTableViewDelegate定义如下
 @end
 ```
 
-## Sample
+## 例子
 ```Objective-C
 - (void)testTableView
 {
